@@ -1,0 +1,287 @@
+/* 主题颜色配置 */
+@main: #20A0FF;
+@lightmain: #58B7FF;
+@darkmain: #1D8CE0;
+@black: #1F2D3D;
+@lightblack: #324057;
+@extralightblack: #475669;
+@silver: #8492A6;
+@lightsilver: #99A9BF;
+@extralightsilver: #C0CCDA;
+@gray: #D3DCE6;
+@lightgray: #E5E9F2;
+@extralightgray: #EFF2F7;
+@darkwhite: #F9FAFC;
+@white: #FFFFFF;
+@sucess: #13CE66;
+@warning: #F7BA2A;
+@danger: #FF4949;
+
+
+/* 预设属性 */
+.fullbox {
+    width: 100%;
+    height: 100%;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+.transition {
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#app {
+    .fullbox;
+}
+/* 文本选中样式 */
+::selection {
+    color: @white;
+    background: @lightblack;
+}
+::-moz-selection {
+    color: @white;
+    background: @lightblack;
+}
+
+/*
+******** 重写ElementUI样式 *********
+*/
+
+/* 链接激活, 链接Hover, 颜色 */
+.el-menu-item.is-active,
+.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active, 
+.el-breadcrumb__item__inner a:hover, 
+.el-breadcrumb__item__inner:hover {
+    color: @darkmain;
+}
+/* 菜单背景颜色 */
+.el-menu, #menulist {
+    background-color: @lightblack;
+}
+/* MainType按钮样式 */
+.el-button {
+    .transition;
+}
+.el-button--primary {
+    background-color: @darkmain;
+    border-color: @darkmain;
+}
+.el-button--primary:focus, 
+.el-button--primary:hover,
+{
+    background-color: @main;
+    border-color: @main;
+}
+/* Text文字按钮样式 */
+.el-button--text {
+    color: @darkmain;
+}
+.line {
+    text-align: center;
+}
+.el-badge__content {
+    height: 20px;
+}
+
+
+
+
+
+/* 顶部导航 */
+#topnav {
+    .fixed;
+    background-color: @extralightgray;
+    height: 70px;
+    width: 100%;
+    top: 0px;
+}
+h2.admin_title {
+    height: 70px;
+    line-height: 70px;
+    color: @extralightblack;
+    float: left;
+    padding-left: 20px;
+    .transition;
+    cursor: pointer;
+}
+h2.admin_title:hover {
+    color: @lightblack;
+}
+
+/* 用户头像 */
+div.user {
+    height: 70px;
+    float: right;
+    padding-right: 20px;
+}
+div.user img.avatar {
+    top: 15px;
+    width: 40px;
+    height: auto;
+    position: relative;
+    border-radius: 30px;
+}
+div.user span.username {
+    cursor: pointer;
+}
+
+
+/* 主体内容 */
+#wrapper {
+    .fullbox;
+    padding-top: 70px;
+    background-color: @white;
+}
+#bodywrap {
+    .fullbox;
+    .relative;
+    padding-left: 220px;
+}
+
+
+/* 左侧菜单 */
+#menulist {
+    width: 220px;
+    height: 100%;
+    .absolute;
+    left: 0px;
+    top: 0px;
+    overflow: auto;
+}
+div.content {
+    .fullbox;
+    .relative;
+    padding-top: 60px;
+}
+
+
+/* 页面名称 */
+div.pagetitle {
+    width: 100%;
+    height: 60px;
+    .absolute;
+    top: 0px;
+    background-color: @darkwhite;
+}
+div.pagenav {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+}
+div.pagenav div.el-breadcrumb {
+    position: relative;
+    top: 24px;
+}
+div.pageactions {
+    height: 60px;
+    float: right;
+    line-height: 60px;
+    padding-right: 20px;
+}
+div.pageactions i {
+    font-size: 20px;
+    color: @silver;
+    cursor: pointer;
+    .transition;
+    padding: 10px;
+}
+div.pageactions i:hover {
+    color: @extralightblack;
+}
+
+
+/* 页面内容 */
+div.pagecontent {
+    .fullbox;
+    padding: 20px;
+    overflow: auto;
+}
+/* 主标题 */
+div.pagecontent h2 {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 10px 0px;
+    color: @extralightblack;
+}
+/* 副标题 */
+div.pagecontent h4 {
+    font-size: 16px;
+    padding: 5px 0px;
+    font-weight: normal;
+    color: @extralightblack;
+}
+/* 段落文字 */
+div.pagecontent p {
+    color: @silver;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0px;
+}
+/* 演示框 */
+div.pagecontent div.demoplace {
+    color: @silver;  
+    border: 1px solid @lightgray; 
+    padding: 20px;
+}
+div.demoplace div.inputholder {
+    width: 300px;
+}
+/* 代码展示 */
+div.pagecontent xmp {
+    line-height: 20px;
+    padding-left: 20px;
+    width: 100%;
+    background-color: @extralightgray;
+}
+/* 表格样式 */
+table.attrtalbe {
+    width: 100%;
+    border-collapse: collapse;
+}   
+table.attrtalbe th {
+    text-align: left;
+    font-size: 14px;
+    color: @extralightblack;
+    padding: 10px;
+    background-color: @extralightgray;
+}
+table.attrtalbe td {
+    text-align: left;
+    font-size: 14px;
+    color: @extralightblack;
+    padding: 10px;
+}
+table.attrtalbe tr:nth-child(even) {
+    background-color: @darkwhite;
+}
+table.attrtalbe tr:last-child {
+    border-bottom: 1px solid @extralightgray;
+}
+
+
+
+
+
